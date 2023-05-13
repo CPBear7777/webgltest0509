@@ -15,10 +15,12 @@
       }
     </style>
   </head>
-  <body>
+  <!-- 滿版 -->
+  <body style="margin: 0; overflow: hidden">
     <!-- 放入功能 -->
     <div id="main">
-      <select onchange="fl(this.value)">
+      <!-- <select onchange="fl(this.value)"> -->
+      <select>
         <!-- 下拉表單 -->
         <option value=""></option>
         <option value="0">1</option>
@@ -27,19 +29,32 @@
         <option value="3">4</option>
       </select>
     </div>
+    <div id="gameContainer"></div>
     <!-- 原有內容 -->
-    <div id="unity-container" class="unity-desktop">
+    <!-- <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width="960" height="600"></canvas>
-    </div>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"></div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">model_test0508</div>
+      </div>
+    </div> -->
     <script>
       // WebGL和Unity的互動
-      var gameInstance = UnityLoader.instantiate(
-        "gameContainer",
-        "Build/webgl.json"
-      );
-      function fl(vale) {
-        gameInstance.SendMessage("Main Camera", "ctrl", value);
-      }
+      // var gameInstance = UnityLoader.instantiate(
+      //   "gameContainer",
+      //   "Build/webgl.json"
+      // );
+      // function fl(vale) {
+      //   gameInstance.SendMessage("Main Camera", "ctrl", value);
+      // }
 
       // 預設內容
       var container = document.querySelector("#unity-container");
